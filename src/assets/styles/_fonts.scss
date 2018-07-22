@@ -1,0 +1,41 @@
+@import '../../assets/styles/_variables';
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('#{$fonts-path}OpenSans.eot') format('embedded-opentype'),
+  url('#{$fonts-path}OpenSans.woff') format('woff'),
+  url('#{$fonts-path}OpenSans.ttf') format('truetype'),
+  url('#{$fonts-path}OpenSans.svg#OpenSans') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Bold';
+  src: url('#{$fonts-path}OpenSans-Bold.eot') format('embedded-opentype'),
+  url('#{$fonts-path}OpenSans-Bold.woff') format('woff'),
+  url('#{$fonts-path}OpenSans-Bold.ttf') format('truetype'),
+  url('#{$fonts-path}OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Light';
+  src: url('#{$fonts-path}OpenSans-Light.eot') format('embedded-opentype'),
+  url('#{$fonts-path}OpenSans-Light.woff') format('woff'),
+  url('#{$fonts-path}OpenSans-Light.ttf') format('truetype'),
+  url('#{$fonts-path}OpenSans-Light.svg#OpenSans-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans-Semibold';
+  src: url('#{$fonts-path}OpenSans-Semibold.eot') format('embedded-opentype'),
+  url('#{$fonts-path}OpenSans-Semibold.woff') format('woff'),
+  url('#{$fonts-path}OpenSans-Semibold.ttf') format('truetype'),
+  url('#{$fonts-path}OpenSans-Semibold.svg#OpenSans-Semibold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
