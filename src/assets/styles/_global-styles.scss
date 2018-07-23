@@ -17,6 +17,7 @@ body{
   flex-direction: column;
   align-items: center;
   height: 100%;
+  position: relative;
   .phone{
     font-family: $openSans;
     font-size: 17px;
@@ -92,23 +93,31 @@ body{
     border-top: 2px solid $black;
   }
   .cart-popup{
-    position: relative;
+    position: absolute;
     max-width: 100%;
     width: 300px;
+    right: 0;
+    top: calc(100% + 20px);
   }
   .cart-list{
     max-width: 100%;
     width: 300px;
-    top: calc(100% + 20px);
-    position: absolute;
-    right: 0;
     box-shadow: 0px 5px 5px rgba(224, 224, 224, 0.6);
+    background: #ffffff;
+    z-index: 1;
   }
+}
+.main-wrapper{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 245px;
   .product-card{
-    margin-top: 245px;
+
     .card-photo{
       display:flex;
       flex-direction: row;
     }
   }
 }
+
