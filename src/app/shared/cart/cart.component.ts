@@ -1,18 +1,21 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.scss']
 })
-export class CartComponent implements OnInit {
+export class CartComponent{
 
   @Input()
   public item;
 
-  public constructor() { }
+  @Output()
+  public removeCart = new EventEmitter();
 
-  public ngOnInit() {
+
+  public remove(item): void {
+    this.removeCart.emit(item);
   }
 
 }
