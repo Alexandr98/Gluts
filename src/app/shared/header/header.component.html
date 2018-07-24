@@ -15,7 +15,10 @@
     </div>
     <div class="cart">
       <img class="img-cart" src="../../../assets/images/cart.png" alt="cart">
+      <div class="cart-amount">
       <button class="button-cart" (click)="toggle()">Корзина</button>
+      <p class="amount">(0)</p>
+      </div>
     </div>
   </div>
   <div class="cart-popup" *ngIf="!condition">

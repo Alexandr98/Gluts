@@ -1,13 +1,16 @@
-<div class="main-wrapper">
-  <div class="product-card" *ngFor='let item of shopList'>
-    <div class='card-info'>
-      <img src="{{item.image}}" alt="cart photo">
+<div class="wrapper">
+  <div class="product-card">
+    <div class="all-cart" *ngFor='let item of shopList'>
+      <div class='product-img'>
+        <img src="{{item.image}}" alt="cart photo">
+      </div>
+      <div class="store-cart">
+        <p class="product-name">{{item.name}}</p>
+        <p class="product-articul">Артиул: {{item.articul}}</p>
+        <p class="product-brand">Бренд: {{item.brand}}</p>
+        <p class="product-price">Цена: {{item.price}}</p>
+        <button  class="ord-btn"(click)="addToTrash(item)">Заказать</button>
+      </div>
     </div>
-    <p>{{item.name}}</p>
-    <p>Артиул:{{item.articul}}</p>
-    <p>Бренд:{{item.brand}}</p>
-    <p>Цена:{{item.price}}</p>
-    <p>{{item.inTrash}}</p>
-    <button (click)="addToTrash(item)">Заказать</button>
   </div>
 </div>
