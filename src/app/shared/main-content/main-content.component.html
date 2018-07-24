@@ -1,3 +1,19 @@
+<<<<<<< HEAD
+<div class="wrapper">
+  <div class="product-card">
+    <div class="all-cart" *ngFor='let item of shopList'>
+      <div class='product-img'>
+        <img src="{{item.image}}" alt="cart photo">
+      </div>
+      <div class="store-cart">
+        <p class="product-name">{{item.name}}</p>
+        <p class="product-articul">Артиул: {{item.articul}}</p>
+        <p class="product-brand">Бренд: {{item.brand}}</p>
+        <p class="product-price">Цена: {{item.price}}</p>
+        <button  class="ord-btn"(click)="addToTrash(item)">Заказать</button>
+      </div>
+    </div>
+=======
 <div class="main-wrapper">
   <div class="product-card" *ngFor='let item of shopList'>
     <div class='card-info'>
@@ -9,5 +25,6 @@
     <p>Цена:{{item.price}}</p>
     <p>{{item.inTrash}}</p>
     <button (click)="addToTrash(item)">Заказать</button>
+>>>>>>> 559cdf51e578541f9e2e92e4b7a452b49d87726a
   </div>
 </div>
