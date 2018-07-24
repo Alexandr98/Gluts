@@ -5,16 +5,16 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.scss']
 })
-export class CartComponent{
+export class CartComponent {
 
   @Input()
-  public item;
+  public item: productList;
 
   @Output()
-  public removeCart = new EventEmitter();
+  public removeCart: EventEmitter<{}> = new EventEmitter();
 
 
-  public remove(item): void {
+  public remove(item: productList): void {
     this.removeCart.emit(item);
   }
 

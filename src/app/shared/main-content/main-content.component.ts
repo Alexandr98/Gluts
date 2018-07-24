@@ -10,9 +10,9 @@ export class MainContentComponent  {
   public shopList: {}[];
 
   @Output()
-  public itemInTrash = new EventEmitter();
+  public itemInTrash: EventEmitter<{}> = new EventEmitter();
 
-  public addToTrash(item) {
+  public addToTrash(item: productList): void {
     this.itemInTrash.emit(item);
   }
 }

@@ -9,38 +9,32 @@ export class AppComponent {
   public inTrash: {}[] = [];
   public shopList: {} = [
     {
-      name: 'Обои', articul: '1045', brand: 'Fromental',  id: '1',
-      price: '1045', image: '../../assets/images/shop_list_fitst.png',
-      inTrash: false
+      name: 'Обои angular', articul: '1045', brand: 'Fromental',  id: '1',
+      price: '1045', image: '../../assets/images/shop_list_fitst.png'
     },
     {
-      name: 'Наркотики', articul: '1045', brand: 'Fromental', id: '2',
-      price: '1045', image: '../../assets/images/shop_list_fiv.png',
-      inTrash: false
+      name: 'Обои react', articul: '1045', brand: 'Fromental', id: '2',
+      price: '1045', image: '../../assets/images/shop_list_fiv.png'
     },
     {
-      name: 'Человек', articul: '1045', brand: 'Fromental', id: '3',
-      price: '1045', image: '../../assets/images/shop_list_sec.png',
-      inTrash: false
+      name: 'Обои js', articul: '1045', brand: 'Fromental', id: '3',
+      price: '1045', image: '../../assets/images/shop_list_sec.png'
     },
     {
-      name: 'Китаец', articul: '1045', brand: 'Fromental', id: '4',
-      price: '1045', image: '../../assets/images/shop_list_sec.png',
-      inTrash: false
+      name: 'Обои observable', articul: '1045', brand: 'Fromental', id: '4',
+      price: '1045', image: '../../assets/images/shop_list_sec.png'
     },
     {
-      name: 'Белый', articul: '1045', brand: 'Fromental', id: '5',
-      price: '1045', image: '../../assets/images/shop_list_sec.png',
-      inTrash: false
+      name: 'Обои array', articul: '1045', brand: 'Fromental', id: '5',
+      price: '1045', image: '../../assets/images/shop_list_sec.png'
     },
     {
-      name: 'Кот', articul: '1045', brand: 'Fromental', id: '6',
-      price: '1045', image: '../../assets/images/shop_list_fiv.png',
-      inTrash: false
+      name: 'Обои JsDaddy', articul: '1045', brand: 'Fromental', id: '6',
+      price: '1045', image: '../../assets/images/shop_list_fiv.png'
     },
   ];
 
- public itemInTrash(event) {
+ public itemInTrash(event: number): void {
     this.inTrash.push(event);
   }
 }

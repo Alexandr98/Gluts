@@ -19,6 +19,6 @@
     </div>
   </div>
   <div class="cart-popup" *ngIf="!condition">
-      <app-cart *ngFor="let item of inTrash" [item]="item" (remove)="remove($event)"></app-cart>
+      <app-cart *ngFor="let item of inTrash" [item]="item" (removeCart)="removeCart($event)"></app-cart>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { splitClasses } from '../../../../node_modules/@angular/compiler';
 
 @Component({
   selector: 'app-header',
@@ -13,5 +14,10 @@ export class HeaderComponent {
 
   public toggle(): void {
     this.condition = !this.condition;
+  }
+
+  public removeCart(event: number): void {
+      this.inTrash.splice(event, 1);
+      this.inTrash.push(event);
   }
 }
