@@ -1,31 +1,29 @@
-<div class="wrapper">
-  <div class="phone">
-    <a class="number" href="tel:+7 (495) 773 23 10;">+7 (495) 773 23 10;</a>
-    <a class="number" href="tel:+7 (495) 171 62 02">+7 (495) 171 62 02</a>
-  </div>
-  <div class="input-section">
-    <div class="logo">
-      <img src="../../../assets/images/logo.png" alt="logo">
+<header>
+  <div class="wrapper">
+    <div class="phone">
+      <a class="number" href="tel:+7 (495) 773 23 10;">+7 (495) 773 23 10;</a>
+      <a class="number" href="tel:+7 (495) 171 62 02">+7 (495) 171 62 02</a>
     </div>
-    <div class="input">
-      <input class="text-input" type="search" placeholder="Более 1000 товаров">
-      <button class="search-button">
-        <img src="../../../assets/images/search.png" alt="search">
-      </button>
-    </div>
-    <div class="cart">
-      <img class="img-cart" src="../../../assets/images/cart.png" alt="cart">
-<<<<<<< HEAD
-      <div class="cart-amount">
-      <button class="button-cart" (click)="toggle()">Корзина</button>
-      <p class="amount">(0)</p>
+    <div class="input-section">
+      <div class="logo">
+        <img src="../../../assets/images/logo.png" alt="logo">
       </div>
-=======
-      <button class="button-cart" (click)="toggle()">Корзина</button>
->>>>>>> 559cdf51e578541f9e2e92e4b7a452b49d87726a
+      <div class="input">
+        <input class="text-input" type="search" placeholder="Более 1000 товаров">
+        <button class="search-button">
+          <img src="../../../assets/images/search.png" alt="search">
+        </button>
+      </div>
+      <div class="cart">
+        <a href=""><img class="img-cart" src="../../../assets/images/cart.png" alt="cart"></a>
+        <div class="cart-amount">
+          <button class="button-cart" (click)="toggle()">Корзина</button>
+          <p class="amount">(0)</p>
+        </div>
+      </div>
+    </div>
+    <div class="cart-popup" *ngIf="!condition">
+      <app-cart *ngFor="let item of inTrash" [item]="item" (removeCart)="removeCart(item)"></app-cart>
     </div>
   </div>
-  <div class="cart-popup" *ngIf="!condition">
-      <app-cart *ngFor="let item of inTrash" [item]="item" (removeCart)="removeCart($event)"></app-cart>
-  </div>
-</div>
+</header>

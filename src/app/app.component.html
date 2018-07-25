@@ -1,13 +1,6 @@
-<div class="wrapper">
-  <!-- header -->
-  <app-header
-    [inTrash]="inTrash"
-  ></app-header>
-  <!-- main -->
-  <app-main-content
-    [shopList]="shopList"
-    (itemInTrash)="itemInTrash($event)"
-  ></app-main-content>
-  <!-- footer -->
-  <app-footer></app-footer>
-</div>
+<!-- header -->
+<app-header [inTrash]="inTrash"></app-header>
+<!-- main -->
+<app-main-content [shopList]="shopList" (itemInTrash)="itemInTrash($event)"></app-main-content>
+<!-- footer -->
+<app-footer></app-footer>

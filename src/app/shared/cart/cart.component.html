@@ -1,6 +1,25 @@
-<<<<<<< HEAD
 <div class="cart-list">
-  <div class="cart-img">
+  <ul>
+    <div class="cart-img">
+      <li class="cart-image">
+        <img src={{item.image}}/>
+      </li>
+    </div>
+    <div class="cart-info">
+      <li class="cart-name">{{item.name}}</li>
+      <li class="cart-quantity">- 5 +</li>
+      <li class="cart-price">Цена {{item.price}} грн</li>
+    </div>
+    <div>
+      <li>
+        <button class="cart-delete" (click)="remove(item.id)">
+          <img src="assets/images/delete.png">
+        </button>
+      </li>
+    </div>
+  </ul>
+</div>
+<!-- <div class="cart-img">
     <img class="cart-image" src={{item.image}}/>
   </div>
   <div class="cart-info">
@@ -10,9 +29,4 @@
   </div>
   <div>
     <button class="cart-delete" (click)="remove(item.id)"><img src="assets/images/delete.png"></button>
-  </div>
-=======
-<div class="cart-list" (click)="remove(item)">
-  {{item.name}}
->>>>>>> 559cdf51e578541f9e2e92e4b7a452b49d87726a
-</div>
+  </div> -->
