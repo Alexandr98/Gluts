@@ -14,14 +14,15 @@ export class HeaderComponent {
   public toggle(): void {
     this.condition = !this.condition;
   }
-  public findIndex(item: number) {
-    for( let i = 0; i < this.inTrash.length; i++) {
-      if ( this.inTrash[i].id === item ) {
-        this.inTrash.splice(i, 1);
-      }
+  public removeCart(event): void {
+    this.inTrash = this.inTrash.filter(el => el.id !== event.id);
     }
   }
+<<<<<<< HEAD
   public removeCart(event) {
     this.inTrash = this.inTrash.filter( el => el.id !== event.id);
 }
 }
+=======
+
+>>>>>>> 8c13bc7cde2f1400c21a91a16de7ef96da27d7ff

@@ -4,6 +4,7 @@
       <a class="number" href="tel:+7 (495) 773 23 10;">+7 (495) 773 23 10;</a>
       <a class="number" href="tel:+7 (495) 171 62 02">+7 (495) 171 62 02</a>
     </div>
+<<<<<<< HEAD
     <div class="input-section">
       <div class="logo">
         <img src="../../../assets/images/logo.png" alt="logo">
@@ -27,3 +28,17 @@
     </div>
   </div>
 </header>
+=======
+    <div class="cart">
+      <img class="img-cart" src="../../../assets/images/cart.png" alt="cart">
+      <div class="cart-amount">
+      <button class="button-cart" (click)="toggle()">Корзина</button>
+      <p class="amount">(0)</p>
+      </div>
+    </div>
+  </div>
+  <div class="cart-popup" *ngIf="!condition">
+      <app-cart *ngFor="let item of inTrash" [item]="item" (removeCart)="removeCart(item)"></app-cart>
+  </div>
+</div>
+>>>>>>> 8c13bc7cde2f1400c21a91a16de7ef96da27d7ff
