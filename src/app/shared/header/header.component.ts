@@ -18,4 +18,3 @@ export class HeaderComponent {
     this.inTrash = this.inTrash.filter(el => el.id !== event.id);
     }
   }
-

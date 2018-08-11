@@ -20,7 +20,7 @@ body{
 .phone{
   font-family: $openSans;
   font-size: 17px;
-  margin: 56px 0 0 0px;
+  padding: 56px 0 30px 0px;
   width: 100%;
    .number{
     padding-right:15px;
@@ -33,17 +33,16 @@ body{
 }
 .input-section{
   position: relative;
-  margin: 30px 0 245px 0px;
+  margin: 0px 0 245px 0px;
   max-width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   .logo{
-    margin-right: 118px;
   }
   .input{
     width: 655px;
-    margin-right: 90px;
     position: relative;
     .text-input{
       outline:none;
@@ -59,23 +58,28 @@ body{
     .search-button{
       background-color:$input;
       border: 0px;
+      display: inline-flex;
+      justify-content: center;
       padding: 0;
       position: absolute;
-      top: 10px;
-      right: 25px;
-      bottom: 7px;
+      top: 50%;
+      right: 20px;
+      width: 25px;
+      height: 25px;
+      transform: translate(0, -50%);
     }
     .search-button:focus {
       outline: none;
   }
   }
   .cart{
+    padding-right: 27px;
     height: 22px;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
     .img-cart{
-      margin-right: 14px;
+      padding-right: 14px;
     }
     .cart-amount{
       display: inline-flex;
@@ -130,11 +134,14 @@ body{
   z-index: 1;
   padding: 39px 0 0px 31px;
   position: relative;
+  ul{
+    display: inline-flex;
+  }
   .cart-img{
     padding-right: 18px;
    .cart-image{
       width:60px;
-      height: 66px;
+      height: 69px;
    }
   }
   .cart-info{
