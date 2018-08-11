@@ -18,11 +18,3 @@ export class HeaderComponent {
     this.inTrash = this.inTrash.filter(el => el.id !== event.id);
     }
   }
-<<<<<<< HEAD
-  public removeCart(event) {
-    this.inTrash = this.inTrash.filter( el => el.id !== event.id);
-}
-}
-=======
-
->>>>>>> 8c13bc7cde2f1400c21a91a16de7ef96da27d7ff
