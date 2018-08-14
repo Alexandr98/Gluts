@@ -10,7 +10,7 @@ export class ProductsService {
  public constructor (private http: HttpClient) {}
 
  public getProducts(): Observable<productList[]> {
-    return this.http.get<productList[]>('./assets/products.json');git 
+    return this.http.get<productList[]>('./assets/products.json');
 
   }
 }
