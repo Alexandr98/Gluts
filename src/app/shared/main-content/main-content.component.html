@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div class="product-card">
-    <div class="all-cart" *ngFor='let item of shopList'>
+    <div class="all-cart" *ngFor='let item of shopList$ | async'>
       <div class='product-img'>
         <img src="{{item.image}}" alt="cart photo">
       </div>

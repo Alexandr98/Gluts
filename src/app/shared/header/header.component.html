@@ -4,17 +4,32 @@
       <a class="number" href="tel:+7 (495) 773 23 10;">+7 (495) 773 23 10;</a>
       <a class="number" href="tel:+7 (495) 171 62 02">+7 (495) 171 62 02</a>
     </div>
-<<<<<<< HEAD
     <div class="input-section">
       <div class="logo">
         <img src="../../../assets/images/logo.png" alt="logo">
       </div>
       <div class="input">
-        <input class="text-input" type="search" placeholder="Более 1000 товаров">
+        <input class="text-input" type="text" placeholder="Более 1000 товаров">
         <button class="search-button">
           <img src="../../../assets/images/search.png" alt="search">
         </button>
       </div>
+      <div (click)="openCategorySearch()" class="category-search">
+        <span *ngIf="!category" class="select-category">Выберите категорию</span>
+        <span *ngIf="category" class="select-category">{{category}}</span>
+
+        <ul *ngIf="openCategory" class="list-category">
+          <li>Искать по:</li>
+          <li (click)="categorySelect($event.target)" *ngFor="let cat of categorySearch">{{cat.name}}</li>
+        </ul>
+      </div>
+      <ul *ngIf="a">
+        <li *ngFor="let i of products | async | search : [a,filteredCategory]">
+          <div class="img-prod-wrap">
+            <img [src]="i.product_img" alt="">
+          </div>
+        </li>
+      </ul>
       <div class="cart">
         <a href=""><img class="img-cart" src="../../../assets/images/cart.png" alt="cart"></a>
         <div class="cart-amount">
@@ -22,23 +37,9 @@
           <p class="amount">(0)</p>
         </div>
       </div>
-    </div>
     <div class="cart-popup" *ngIf="!condition">
       <app-cart *ngFor="let item of inTrash" [item]="item" (removeCart)="removeCart(item)"></app-cart>
     </div>
-  </div>
-</header>
-=======
-    <div class="cart">
-      <img class="img-cart" src="../../../assets/images/cart.png" alt="cart">
-      <div class="cart-amount">
-      <button class="button-cart" (click)="toggle()">Корзина</button>
-      <p class="amount">(0)</p>
-      </div>
     </div>
   </div>
-  <div class="cart-popup" *ngIf="!condition">
-      <app-cart *ngFor="let item of inTrash" [item]="item" (removeCart)="removeCart(item)"></app-cart>
-  </div>
-</div>
->>>>>>> 8c13bc7cde2f1400c21a91a16de7ef96da27d7ff
+</header>

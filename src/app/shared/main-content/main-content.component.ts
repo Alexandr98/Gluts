@@ -7,7 +7,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class MainContentComponent  {
   @Input()
-  public shopList: {}[];
+  public shopList: any;
 
   @Output()
   public itemInTrash: EventEmitter<{}> = new EventEmitter();
