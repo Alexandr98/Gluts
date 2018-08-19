@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div class="product-card">
-    <div class="all-cart" *ngFor='let item of shopList$ | async'>
+    <div class="all-cart" *ngFor='let item of products$ | async'>
       <div class='product-img'>
         <img src="{{item.image}}" alt="cart photo">
       </div>
@@ -9,7 +9,7 @@
         <p class="product-articul">Артиул: {{item.articul}}</p>
         <p class="product-brand">Бренд: {{item.brand}}</p>
         <p class="product-price">Цена: {{item.price}}</p>
-        <button  class="ord-btn"(click)="addToTrash(item)">Заказать</button>
+        <button  class="ord-btn"(click)="addToCart(item)">Заказать</button>
       </div>
     </div>
   </div>

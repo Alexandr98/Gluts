@@ -188,7 +188,13 @@ body{
     padding: 0;
   }
 }
-
+.category{
+  padding: 5px 10px;
+}
+.category:hover{
+  background-color: #9054b2;
+  color:#fff;
+}
 .product-card{
   display: flex;
   flex-wrap: wrap;

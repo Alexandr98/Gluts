@@ -8,17 +8,17 @@ import { Observable } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  public shopList$: Observable<productList[]>;
-  public inTrash: {}[] = [];
+  public products$: Observable<product[]>;
+  public cartProducts: any = [];
 
-  public constructor(private shopList: ProductsService) {
+  public constructor(private products: ProductsService) {
 
   }
  public ngOnInit(): void {
-    this.shopList$ = this.shopList.getProducts();
+  this.products$ = this.products.getProducts();
   }
 
-  public itemInTrash(event: number): void {
-    this.inTrash.push(event);
+  public addToCart(event: any): void {
+    this.cartProducts.push(event);
   }
 }

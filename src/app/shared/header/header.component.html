@@ -19,12 +19,12 @@
         <span *ngIf="category" class="select-category">{{category}}</span>
 
         <ul *ngIf="openCategory" class="list-category">
-          <li>Искать по:</li>
-          <li (click)="categorySelect($event.target)" *ngFor="let cat of categorySearch">{{cat.name}}</li>
+          <li class="category">Искать по:</li>
+          <li class="category" (click)="categorySelect($event.target)" *ngFor="let cat of categorySearch">{{cat.name}}</li>
         </ul>
       </div>
       <ul *ngIf="a">
-        <li *ngFor="let i of products | async | search : [a,filteredCategory]">
+        <li *ngFor="let i of products$ | async | search : [a,filteredCategory]">
           <div class="img-prod-wrap">
             <img [src]="i.product_img" alt="">
           </div>
@@ -38,7 +38,7 @@
         </div>
       </div>
     <div class="cart-popup" *ngIf="!condition">
-      <app-cart *ngFor="let item of inTrash" [item]="item" (removeCart)="removeCart(item)"></app-cart>
+      <app-cart *ngFor="let item of cartProducts" [item]="item" (removeCart)="removeCart(item)"></app-cart>
     </div>
     </div>
   </div>

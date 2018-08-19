@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-main-content',
@@ -6,13 +7,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   styleUrls: ['./main-content.component.scss']
 })
 export class MainContentComponent  {
-  @Input()
-  public shopList: any;
+  @Input() public products$: Observable<product[]>;
+  @Output() public toCart: EventEmitter<any> = new EventEmitter();
 
-  @Output()
-  public itemInTrash: EventEmitter<{}> = new EventEmitter();
-
-  public addToTrash(item: productList): void {
-    this.itemInTrash.emit(item);
+  public addToCart(item: any): void {
+    this.toCart.emit(item);
   }
 }

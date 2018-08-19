@@ -1,0 +1,42 @@
+<div class="order">
+  <div class="order-sheet">Лист заказа</div>
+  <div class="order-container">
+    <div class="form">
+      <div class="fill-in-form">
+        Заполните форму
+      </div>
+      <div class="fill-data" [formGroup] = "form">
+        <div class="first-last-name">
+          <div class="first-name">
+            <label for="your-name">Ваше имя*</label>
+            <input type="text" class="input-general" id="your-name" formControlName = "firstName">
+          </div>
+          <div class="last-name">
+            <label for="last-name">Фамилия</label>
+            <input type="text" class="input-general" id="last-name" formControlName = "lastName">
+          </div>
+        </div>
+        <div class="email-phone">
+          <div class="email">
+            <label for="email">Email*</label>
+            <input type="text" class="input-general" id="email" formControlName = "email" [ngClass] = "{'invalid': form.status === 'INVALID'}">          </div>
+          <div class="phone">
+            <label for="phone-number">Телефон</label>
+            <input type="text" class="input-general" id="phone-number" formControlName = "phone">
+          </div>
+        </div>
+      </div>
+      <div class="comment-for-order">
+        <div class="textarea">
+          <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+        </div>
+        <div class="button">
+          <button>Отправить</button>
+        </div>
+      </div>
+    </div>
+    <div class="your-order">
+      ваш заказ
+    </div>
+  </div>
+</div>

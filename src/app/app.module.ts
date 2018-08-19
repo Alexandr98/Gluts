@@ -9,6 +9,10 @@ import { MainContentComponent } from './shared/main-content/main-content.compone
 import { SearchPipe } from './search.pipe';
 import { ProductsService } from './products.service';
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { routes } from './routes';
+import { TabsComponent } from './shared/tabs/tabs.component';
+import { LoginOrderComponent } from './shared/login-order/login-order.component';
 
 
 
@@ -19,11 +23,14 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     CartComponent,
     MainContentComponent,
-    SearchPipe
+    SearchPipe,
+    TabsComponent,
+    LoginOrderComponent
   ],
   imports: [
     HttpClientModule,
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [ProductsService],
   bootstrap: [AppComponent]

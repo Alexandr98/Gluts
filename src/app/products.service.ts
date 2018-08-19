@@ -9,8 +9,8 @@ export class ProductsService {
 
  public constructor (private http: HttpClient) {}
 
- public getProducts(): Observable<productList[]> {
-    return this.http.get<productList[]>('./assets/products.json');
+ public getProducts(): Observable<product[]> {
+    return this.http.get<product[]>('assets/product.json');
 
   }
 }

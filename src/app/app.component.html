@@ -1,6 +1,8 @@
 <!-- header -->
-<app-header [inTrash]="inTrash"></app-header>
+<app-header [cartProducts]="cartProducts"></app-header>
 <!-- main -->
-<app-main-content [shopList]="shopList" (itemInTrash)="itemInTrash($event)"></app-main-content>
+<app-main-content [products$]="products$" (toCart)="addToCart($event)"></app-main-content>
+<!--tabs-->
+<app-tabs></app-tabs>
 <!-- footer -->
 <app-footer></app-footer>

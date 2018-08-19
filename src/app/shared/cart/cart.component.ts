@@ -8,13 +8,13 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class CartComponent {
 
   @Input()
-  public item: productList;
+  public item: product;
 
   @Output()
   public removeCart: EventEmitter<{}> = new EventEmitter();
 
 
-  public remove(item: productList): void {
+  public remove(item: any): void {
     this.removeCart.emit(item);
   }
 
