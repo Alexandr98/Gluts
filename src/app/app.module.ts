@@ -15,7 +15,6 @@ import { TabsComponent } from './shared/tabs/tabs.component';
 import { LoginOrderComponent } from './shared/login-order/login-order.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
